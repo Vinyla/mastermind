@@ -1,0 +1,23 @@
+.container {
+  width: 50%;
+  display: block;
+  justify-content: center;
+}
+
+.rules h3 {
+ cursor: pointer;
+}
+
+.color-picker {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.rowa.active {
+  border:2px solid #BBAAAA;
+  background-color: #FFF9FC;
+}
