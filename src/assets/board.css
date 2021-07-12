@@ -4,7 +4,13 @@
   align-items: center;
   padding: 6px;
   background-color: whitesmoke;
-  border: 1px solid gainsboro;
+  border: 2px solid gainsboro;
+  margin: 4px;
+  border-radius: 8px;
+}
+
+.board .rows.active {
+  border: 3px solid rgb(151, 206, 68) !important;
 }
 
 .circle-peg {
@@ -16,12 +22,23 @@
   margin: 5px;
   cursor: pointer;
 }
-.button-div{
+
+.button-div {
   display: flex;
 }
 
 button {
   border: none;
-    cursor: pointer;
+  cursor: pointer;
+}
 
+.check-button {
+  background-color: transparent;
+  color: rgb(151, 206, 68);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.check-button .disabled {
+color: gainsboro;
 }

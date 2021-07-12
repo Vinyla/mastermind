@@ -1,25 +1,28 @@
 import React, { useState } from 'react';
-import Peg from './Peg';
+import CheckButton from './CheckButton';
+import Circles from './Circles';
+import Hints from './Hints';
 
 const Row = (props) => {
-  const [active, setActive] = useState('');
 
-  // if (props.activeRow === props.id) {
-  //   setActive('active');
-  // } else return;
-
-  let peg = [];
-  for (let i = 0; i < 4; i++) {
-    peg.push(<Peg key={i} activeColor={props.activeColor} />);
+  let active = '';
+  if (props.activeRow === props.id) {
+    active = 'active';
   }
 
   return (
-    <div>
-      <div className={'rows ' + active}>
-        <div className={'button-div'}>{peg}</div>
-        <button onClick={props.canCheck}>check</button>
-        <div>hint pegs</div>
-      </div>
+    <div className={'rows ' + active}>
+      <Circles
+        activeColor={props.activeColor}
+        activeRow={props.activeRow}
+        id={props.id}
+      />
+      <CheckButton
+        activeRow={props.activeRow}
+        id={props.id}
+        checkColorPatern={props.checkColorPatern}
+      />
+      <Hints />
     </div>
   );
 };
