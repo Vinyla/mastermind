@@ -2,20 +2,25 @@ import React, { useState } from 'react';
 import Row from './Row';
 
 const Board = (props) => {
-  let rows = [];
+  const [activeRow, setActiveRow] = useState(0);
+  // const [canCheck, setCanCheck] = useState(false);
 
-  for (let i = 0; i < props.totalRows; i++) {
-    rows.push(
-      <Row
-        id={i}
-        key={i}
-        activeColor={props.activeColor}
-        activeRow={props.activeRow}
-        checkColorPatern={props.checkColorPatern}
-      />
-    );
-  }
-  return <div className='board'>{rows}</div>;
+
+  return (
+    <div className='board'>
+      {Array(10)
+        .fill(null)
+        .map((row, i) => (
+          <Row
+            key={i}
+            id={i}
+            activeColor={props.activeColor}
+            activeRow={activeRow}
+            setActiveRow={setActiveRow}
+          />
+        ))}
+    </div>
+  );
 };
 
 export default Board;

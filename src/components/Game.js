@@ -12,18 +12,16 @@ const Game = () => {
     'orange'
   ]);
   const [activeColor, setActiveColor] = useState('crimson');
-  const [totalRows] = useState(10);
-  const [activeRow, setActiveRow] = useState(0);
 
   // set random color pattern
-  const colorPattern = [];
-  for (let i = 0; i < 4; i++) {
-    colorPattern.push(colors[Math.floor(Math.random() * 4) + 1]);
-  }
-  console.log(colorPattern);
+  // const colorPattern = [];
+  // for (let i = 0; i < 4; i++) {
+  //   colorPattern.push(colors[Math.floor(Math.random() * 4) + 1]);
+  // }
+  // console.log(colorPattern);
 
-  const checkColorPatern = () => {
-    setActiveRow(activeRow + 1);
+  const colorIsActive = (color) => {
+    setActiveColor(color);
   };
 
   return (
@@ -36,7 +34,7 @@ const Game = () => {
         {colors &&
           colors.map((color, i) => (
             <div
-              onClick={() => setActiveColor(color)}
+              onClick={() => colorIsActive(color)}
               className={'color-picker'}
               key={i}
               style={{
@@ -46,12 +44,7 @@ const Game = () => {
             ></div>
           ))}
       </div>
-      <Board
-        activeColor={activeColor}
-        totalRows={totalRows}
-        activeRow={activeRow}
-        checkColorPatern={checkColorPatern}
-      />
+      <Board activeColor={activeColor} />
     </div>
   );
 };

@@ -1,15 +1,21 @@
 import React, { useState } from 'react';
 
 const Peg = (props) => {
-  const [background, setBackground] = useState();
+  const [defaultColor, setDefaultColor] = useState('gainsboro');
+
+  const changePegColor = () => {
+    setDefaultColor(props.activeColor);
+  };
+
   return (
     <button
-      disabled={props.activeRow !== props.id}
       className={'circle-peg'}
-      onClick={() => setBackground(props.activeColor)}
-      style={{ background: background }}
+      disabled={props.activeRow !== props.row}
+      style={{
+        background: defaultColor
+      }}
+      onClick={changePegColor}
     ></button>
   );
 };
-
 export default Peg;

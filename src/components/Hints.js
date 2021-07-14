@@ -1,9 +1,7 @@
 import React from 'react';
 
 const Hints = () => {
- return (
-  <div>hints</div>
- )
+ return <span className={'hints'}></span>;
 }
 
 export default Hints;
