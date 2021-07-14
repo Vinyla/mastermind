@@ -4,14 +4,6 @@ import CheckButton from './CheckButton';
 import Hints from './Hints';
 
 const Row = (props) => {
-  // const [defaultColor, setDefaultColor] = useState('thistle');
-  // const changePegColor = () => {};
-
-
-   const checkColors = () => {
-     props.setActiveRow(props.activeRow + 1);
-   };
-
   return (
     <div
       className={'rows'}
@@ -37,12 +29,12 @@ const Row = (props) => {
         activeRow={props.activeRow}
         setActiveRow={props.setActiveRow}
         row={props.id}
-        checkColors={checkColors}
+        checkWin={props.checkWin}
       />
       {Array(4)
         .fill(null)
         .map((hint, i) => (
-          <Hints key={i} id={i}/>
+          <Hints key={i} id={i} />
         ))}
     </div>
   );

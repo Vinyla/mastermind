@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
 const Peg = (props) => {
-  const [defaultColor, setDefaultColor] = useState('gainsboro');
+  const [defaultPegColor, setDefaultPegColor] = useState('gainsboro');
 
   const changePegColor = () => {
-    setDefaultColor(props.activeColor);
+    setDefaultPegColor(props.activeColor);
   };
 
   return (
@@ -12,7 +12,7 @@ const Peg = (props) => {
       className={'circle-peg'}
       disabled={props.activeRow !== props.row}
       style={{
-        background: defaultColor
+        background: defaultPegColor
       }}
       onClick={changePegColor}
     ></button>

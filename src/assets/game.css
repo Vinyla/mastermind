@@ -34,4 +34,27 @@
   cursor: pointer;
 }
 
+.new-game {
+  padding: 8px;
+  margin: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: rgb(151, 206, 68);
+  border: 2px solid rgb(151, 206, 68);
+  border-radius: 6px;
+  background: none;
+}
 
+.solution {
+  margin: 8px;
+  padding: 12px;
+  border: 2px solid rgb(151, 206, 68);
+  border-radius: 10px;
+  background-color: whitesmoke;
+}
+
+.solution p {
+  font-weight: 700;
+  margin: 0;
+  color: grey;
+}

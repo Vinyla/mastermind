@@ -2,9 +2,7 @@ import React, { useState } from 'react';
 import Row from './Row';
 
 const Board = (props) => {
-  const [activeRow, setActiveRow] = useState(0);
   // const [canCheck, setCanCheck] = useState(false);
-
 
   return (
     <div className='board'>
@@ -15,8 +13,8 @@ const Board = (props) => {
             key={i}
             id={i}
             activeColor={props.activeColor}
-            activeRow={activeRow}
-            setActiveRow={setActiveRow}
+            activeRow={props.activeRow}
+            checkWin={props.checkWin}
           />
         ))}
     </div>
