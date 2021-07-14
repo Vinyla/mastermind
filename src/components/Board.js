@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Row from './Row';
 
 const Board = (props) => {
-  // const [canCheck, setCanCheck] = useState(false);
 
   return (
     <div className='board'>
