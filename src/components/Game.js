@@ -24,7 +24,6 @@ class Game extends React.Component {
     const trueRow = [];
     for (let i = 0; i < 4; i++) {
       trueRow.push(colors[Math.floor(Math.random() * 6)]);
-      console.log(trueRow);
     }
 
     this.state = {
