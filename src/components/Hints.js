@@ -2,7 +2,7 @@ import React from 'react';
 import CheckBox from './CheckBox';
 
 const Hints = (props) => {
-  let allHints = Array(4).fill(null);
+  let allHints = [];
   let hintClass = '';
   const rowId = +props.rowId.substr(4);
   const hintArr = props.state.hints;
