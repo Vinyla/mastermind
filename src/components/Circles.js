@@ -7,8 +7,8 @@ const Circles = (props) => {
   for (let i = 0; i < 4; i++) {
     Pegs.push(
       <Peg
-        state={this.props.state}
-        pegAction={this.props.pegAction}
+        state={props.state}
+        pegAction={props.pegAction}
         key={'p' + rowId + '-' + i}
         pegId={'p' + rowId + '-' + i}
       />
