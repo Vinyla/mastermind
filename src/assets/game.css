@@ -1,18 +1,17 @@
-.container {
+.game-container {
   text-align: center;
-}
-
-.game {
-  display: inline-block;
-  width: 50%;
 }
 
 .rules {
   margin: 0.33em auto 0.8em auto;
-  max-width: 470px;
+  max-width: 400px;
 }
 
 .rules h3 {
+  font-size: 1.05em;
+  margin: 5px 0 0 0;
+  color: #333;
+  font-weight: normal;
   cursor: pointer;
 }
 
@@ -25,36 +24,137 @@
   color: #666;
 }
 
-.color-picker {
+.colors .color-holder,
+.board .peg {
   height: 40px;
   width: 40px;
   border-radius: 50%;
   display: inline-block;
   margin: 5px;
   cursor: pointer;
+  background-color: gainsboro;
 }
 
-.new-game {
-  padding: 8px;
-  margin: 8px;
-  font-size: 14px;
-  font-weight: 700;
+.colors .crimson,
+.circles .crimson {
+  background-color: crimson;
+}
+
+.colors .limegreen,
+.circles .limegreen {
+  background-color: limegreen;
+}
+
+.colors .darkcyan,
+.circles .darkcyan {
+  background-color: darkcyan;
+}
+
+.colors .yellow,
+.circles .yellow {
+  background-color: yellow;
+}
+
+.colors .rebeccapurple,
+.circles .rebeccapurple {
+  background-color: rebeccapurple;
+}
+
+.colors .orange,
+.circles .orange {
+  background-color: orange;
+}
+
+.colors .active {
+  box-shadow: 0 0 5px #000;
+}
+
+.board {
+  margin-top: 15px;
+}
+.circles {
+  display: flex;
+}
+
+.board .check-button {
+  font-size: 1em;
   color: rgb(151, 206, 68);
-  border: 2px solid rgb(151, 206, 68);
-  border-radius: 6px;
-  background: none;
+  cursor: pointer;
+  font-weight: 600;
 }
 
-.solution {
-  margin: 8px;
-  padding: 12px;
-  border: 2px solid rgb(151, 206, 68);
-  border-radius: 10px;
+.board .check-button.disabled {
+  color: #ccc0c6;
+  cursor: default;
+}
+
+.board .check-button.hidden {
+  display: none;
+  cursor: default;
+}
+
+.board .row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 6px;
   background-color: whitesmoke;
+  border: 3px solid gainsboro;
+  border-radius: 8px;
+  margin: 0 auto 6px auto;
+  max-width: 360px;
+}
+
+.board .row.active {
+  border: 3px solid rgb(151, 206, 68);
+  background-color: #fff9fc;
+}
+
+.hints {
+  display: flex;
+}
+
+.board .hints span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 1px solid gainsboro;
+  background-color: white;
+  margin: 2px;
+}
+
+.board .hints span.exact {
+  background-color: rgb(151, 206, 68);
+}
+
+.board .hints span.partial {
+  background-color: rgb(223, 180, 41);
 }
 
 .solution p {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.solution .hidden {
+  display: none;
+}
+
+.solution .color-holder {
+  cursor: default;
+}
+
+.solution a {
+  color: rgb(151, 206, 68);
+  font-size: 20px;
   font-weight: 700;
-  margin: 0;
-  color: grey;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.message {
+  color: rgb(151, 206, 68);
+  margin: 0.5em auto;
+  font-size: 20px;
+  font-weight: 700;
 }
