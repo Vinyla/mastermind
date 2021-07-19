@@ -24,6 +24,7 @@ class Game extends React.Component {
     const trueRow = [];
     for (let i = 0; i < 4; i++) {
       trueRow.push(colors[Math.floor(Math.random() * 6)]);
+      console.log(trueRow);
     }
 
     this.state = {
@@ -153,7 +154,7 @@ class Game extends React.Component {
           pegAction={this.setColor}
           checkAction={this.checkRow}
         />
-        <p className='message'> {message} </p>
+        <p className='message'>{message} </p>
         <Solution state={this.state} newGame={this.newGame} />
       </div>
     );
